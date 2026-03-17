@@ -31,6 +31,6 @@ echo ============================================================
 echo  FINAL STEP: Run this command in your terminal, then
 echo  restart Claude Code:
 echo.
-echo  claude mcp add chrome-devtools "%INSTALL_DIR%\.venv\Scripts\python.exe" "%INSTALL_DIR%\server.py" -e CHROME_DEBUG_PORT=9222
+echo  claude mcp add chrome-devtools "%%USERPROFILE%%\chrome-devtools-mcp\.venv\Scripts\python.exe" "%%USERPROFILE%%\chrome-devtools-mcp\server.py" -e CHROME_DEBUG_PORT=9222
 echo ============================================================
 pause
