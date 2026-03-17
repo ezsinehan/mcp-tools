@@ -1,1 +1,6 @@
-C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+# Paste the full path to your Brave (or Chrome) executable below and save as brave-path.txt
+# Windows (Brave):  C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+# Windows (Chrome): C:\Program Files\Google\Chrome\Application\chrome.exe
+# macOS (Brave):    /Applications/Brave Browser.app/Contents/MacOS/Brave Browser
+# macOS (Chrome):   /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+YOUR_PATH_HERE
