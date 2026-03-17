@@ -17,10 +17,6 @@ echo Installing dependencies...
 cd "%INSTALL_DIR%"
 uv sync
 
-:: Register MCP with Claude Code
-echo Registering MCP server with Claude Code...
-claude mcp add chrome-devtools "%INSTALL_DIR%\.venv\Scripts\python.exe" "%INSTALL_DIR%\server.py" -e CHROME_DEBUG_PORT=9222
-
 :: Set up brave-path.txt if not present
 if not exist "%~dp0brave-path.txt" (
     echo.
@@ -31,5 +27,10 @@ if not exist "%~dp0brave-path.txt" (
 )
 
 echo.
-echo Done! Restart Claude Code to activate the MCP server.
+echo ============================================================
+echo  FINAL STEP: Run this command in your terminal, then
+echo  restart Claude Code:
+echo.
+echo  claude mcp add chrome-devtools "%INSTALL_DIR%\.venv\Scripts\python.exe" "%INSTALL_DIR%\server.py" -e CHROME_DEBUG_PORT=9222
+echo ============================================================
 pause
