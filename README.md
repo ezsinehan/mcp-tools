@@ -2,25 +2,24 @@
 
 MCP server configs and dev tooling scripts.
 
-## brave-debug
+## Setup
 
-Launches Brave with remote debugging enabled on port 9222 for use with the [chrome-devtools MCP server](https://github.com/benjaminr/chrome-devtools-mcp).
+1. Clone this repo
+2. Copy `brave-path.example.txt` to `brave-path.txt` and set your Brave executable path
+3. Double-click `setup.bat` (or run it from terminal)
+4. Restart Claude Code
 
-### Setup
+That's it — `setup.bat` will clone the chrome-devtools MCP server, install dependencies, and register it with Claude Code automatically.
 
-1. Copy `brave-path.example.txt` to `brave-path.txt`
-2. Edit `brave-path.txt` with your Brave executable path
-3. Run `brave-debug.bat`
+## Usage
 
-### Chrome DevTools MCP
+Run `brave-debug` from any terminal to kill existing Brave instances and relaunch with remote debugging enabled on port 9222.
 
-Install the MCP server:
+Then start Claude Code and ask it to inspect your site.
 
-```bash
-git clone https://github.com/benjaminr/chrome-devtools-mcp.git
-cd chrome-devtools-mcp
-uv sync
-claude mcp add chrome-devtools "$(pwd)/.venv/Scripts/python.exe" "$(pwd)/server.py" -e CHROME_DEBUG_PORT=9222
-```
+## Requirements
 
-Then launch `brave-debug.bat` before starting Claude Code.
+- [Git](https://git-scm.com/)
+- [uv](https://docs.astral.sh/uv/) — install with `pip install uv`
+- [Claude Code](https://claude.ai/code)
+- Brave Browser
